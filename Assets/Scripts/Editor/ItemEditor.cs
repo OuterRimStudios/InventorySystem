@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -9,6 +9,7 @@ public class ItemEditor : Editor {
 
 	SerializedProperty itemNameProp;
 	SerializedProperty uiIconProp;
+	SerializedProperty selectionIndiciesProp;
 	//SerializedProperty addonsProp;
 
 	readonly string[] objectTypes = new string[] {"int", "float", "string", "GameObject", "Object"};
@@ -17,6 +18,7 @@ public class ItemEditor : Editor {
 	{
 		itemNameProp = serializedObject.FindProperty("itemName");
 		uiIconProp = serializedObject.FindProperty("uiIcon");
+		selectionIndiciesProp = serializedObject.FindProperty("selectionIndicies");
 		//addonsProp = serializedObject.FindProperty("addons");
 	}
 
@@ -28,41 +30,22 @@ public class ItemEditor : Editor {
 		itemNameProp.stringValue = EditorGUILayout.TextField("Item Name", itemNameProp.stringValue);
 		uiIconProp.objectReferenceValue = EditorGUILayout.ObjectField("UI Icon", uiIconProp.objectReferenceValue, typeof(Sprite), false);
 
+		EditorGUILayout.BeginVertical("box");
+
 		if(_item.Addons != null && _item.Addons.Count > 0)
 		{
-			EditorGUILayout.BeginVertical("box");
+			EditorGUILayout.BeginVertical();
 
 			for(int i = 0; i < _item.Addons.Count; i++)
 			{
 				EditorGUILayout.BeginHorizontal();
-
-				int selectionIndex = 0;
-				selectionIndex = EditorGUILayout.Popup(selectionIndex, objectTypes);
-
-				switch(selectionIndex)
-				{
-					case 0:
-						_item.Addons[i] = Convert.ToInt32(EditorGUILayout.IntField("Value", (int)_item.Addons[i]));
-						break;
-					case 1:
-						_item.Addons[i] = Convert.ToDecimal(EditorGUILayout.FloatField("Value", (float)_item.Addons[i]));
-						break;
-					case 2:
-						_item.Addons[i] = Convert.ToString(EditorGUILayout.TextField("Value", (string)_item.Addons[i]));
-						break;
-					case 3:
-						_item.Addons[i] = (GameObject)EditorGUILayout.ObjectField((UnityEngine.Object)_item.Addons[i], typeof(GameObject), false);
-						break;
-					case 4:
-						_item.Addons[i] = (UnityEngine.Object)EditorGUILayout.ObjectField((UnityEngine.Object)_item.Addons[i], typeof(UnityEngine.Object), false);
-						break;
-					default:
-						break;
-				}
-				//DrawTypeField(_item.Addons[i]);
+				DrawTypeField(_item.Addons[i], i);
 
 				if (GUILayout.Button("-", GUILayout.MinWidth(15f), GUILayout.MaxWidth(50f)))
+				{
 					_item.RemoveAddon(i);
+					selectionIndiciesProp.DeleteArrayElementAtIndex(i);
+				}
 
 				EditorGUILayout.EndHorizontal();
 			}
@@ -70,44 +53,59 @@ public class ItemEditor : Editor {
 			EditorGUILayout.EndVertical();
 		}
 
-		EditorGUILayout.BeginHorizontal("box");
+		EditorGUILayout.BeginHorizontal();
 		if (GUILayout.Button("+", GUILayout.MinWidth(15f), GUILayout.MaxWidth(50f)))
+		{
 			_item.AddAddon();
+			if(selectionIndiciesProp.arraySize > 0)
+				selectionIndiciesProp.InsertArrayElementAtIndex(selectionIndiciesProp.arraySize - 1);
+			else
+				selectionIndiciesProp.InsertArrayElementAtIndex(0);
+		}
 
 		if (GUILayout.Button("-", GUILayout.MinWidth(15f), GUILayout.MaxWidth(50f)))
+		{
 			_item.RemoveAddon(_item.Addons.Count - 1);
+			selectionIndiciesProp.DeleteArrayElementAtIndex(selectionIndiciesProp.arraySize - 1);
+		}
 			
 		EditorGUILayout.EndHorizontal();
+		EditorGUILayout.EndVertical();
 
+		EditorUtility.SetDirty(target);
 		serializedObject.ApplyModifiedProperties();
 	}
 
-	void DrawTypeField(object addon)
+	void DrawTypeField(object addon, int index)
 	{
-		int selectionIndex = 0;
-		selectionIndex = EditorGUILayout.Popup(selectionIndex, objectTypes);
+		selectionIndiciesProp.GetArrayElementAtIndex(index).intValue = EditorGUILayout.Popup(selectionIndiciesProp.GetArrayElementAtIndex(index).intValue, objectTypes);
 
-		switch(selectionIndex)
+		switch(selectionIndiciesProp.GetArrayElementAtIndex(index).intValue)
 		{
 			case 0:
-				addon = 0;
-				addon = EditorGUILayout.IntField("Value", (int)addon);
+				int tempInt = 0;
+				tempInt = EditorGUILayout.IntField("", tempInt);
+				addon = tempInt;
 				break;
 			case 1:
-				addon = 0;
-				addon = (float)EditorGUILayout.FloatField("Value", (float)addon);
+				float tempFloat = 0f;
+				tempFloat = EditorGUILayout.FloatField("", tempFloat);
+				addon = tempFloat;
 				break;
 			case 2:
-				addon = "";
-				addon = (string)EditorGUILayout.TextField("Value", (string)addon);
+				string tempString = "";
+				tempString = EditorGUILayout.TextField("", tempString);
+				addon = tempString;
 				break;
 			case 3:
-				addon = new GameObject();
-				addon = (GameObject)EditorGUILayout.ObjectField((UnityEngine.Object)addon, typeof(GameObject), false);
+				Object tempGO = new Object();
+				tempGO = EditorGUILayout.ObjectField(tempGO, typeof(GameObject), false);
+				addon = tempGO;
 				break;
 			case 4:
-				addon = new UnityEngine.Object();
-				addon = (UnityEngine.Object)EditorGUILayout.ObjectField((UnityEngine.Object)addon, typeof(UnityEngine.Object), false);
+				Object tempObj = new Object();
+				tempObj = EditorGUILayout.ObjectField(tempObj, typeof(Object), false);
+				addon = tempObj;
 				break;
 			default:
 				break;

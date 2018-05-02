@@ -11,14 +11,15 @@ public class Item : ScriptableObject {
 	[SerializeField]
 	Sprite uiIcon;
 
-	[SerializeField]
 	public List<object> Addons {get; protected set;}
+	[SerializeField]
+	int[] selectionIndicies;
 
 	public void AddAddon()
 	{
 		if(Addons == null)
 			Addons = new List<object>();
-			
+
 		object addon = new object();
 		Addons.Add(addon);
 	}
