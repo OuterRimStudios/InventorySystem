@@ -160,10 +160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615f59a03f4b09f45978b0b53857844f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 114015773092704776}
-  stackSizeText: {fileID: 114867884410974200}
-  item: {fileID: 0}
-  stackSize: 0
+  inventorySlot:
+    icon: {fileID: 114015773092704776}
+    stackSizeText: {fileID: 114867884410974200}
+    inventorySlotGO: {fileID: 0}
+    item: {fileID: 0}
+    stackSize: 0
 --- !u!114 &114588169889362156
 MonoBehaviour:
   m_ObjectHideFlags: 1

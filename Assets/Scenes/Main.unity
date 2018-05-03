@@ -604,7 +604,6 @@ GameObject:
   - component: {fileID: 1763084758}
   - component: {fileID: 1763084757}
   - component: {fileID: 1763084756}
-  - component: {fileID: 1763084755}
   - component: {fileID: 1763084759}
   m_Layer: 5
   m_Name: Inventory Content Fitter
@@ -631,24 +630,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1763084755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763084753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 607a9b8a29d004645ba01115ed24435d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventorySlotPrefab: {fileID: 0}
-  inventoryContentArea: {fileID: 1763084754}
-  inventorySlotCountMax: 10
-  canDropItems: 1
-  stacksConsumeSlots: 1
-  inventorySlots: []
-  occupiedInventorySlots: []
 --- !u!114 &1763084756
 MonoBehaviour:
   m_ObjectHideFlags: 0
