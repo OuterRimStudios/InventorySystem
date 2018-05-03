@@ -10,4 +10,6 @@ public class Item : ScriptableObject {
 	public int slotCount;
 	public Sprite uiIcon;
 	public GameObject model;
+	public bool equippable;
+	
 }

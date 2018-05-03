@@ -74,6 +74,44 @@ public class Inventory : MonoBehaviour {
         UpdateUI();
     }
 
+	public void RemoveItem(Item itemToRemove)
+	{
+		if (InventoryContains(itemToRemove))															//Check if our inventory contains the item we're removing
+		{
+			int slotIndex = GetSlotIndex(itemToRemove);                                                	//Get the index of the InventorySlot in the occupiedInventorySlots List that holds the added item
+
+            if (slotIndex >= 0)
+			{
+				if(occupiedInventorySlots[slotIndex].stackSize > 1)									//Check if our InventorySlot stack size is at 0
+				{
+					int newSlotIndex = GetSlotIndex(itemToRemove, slotIndex);
+					if(newSlotIndex >= 0)
+					{
+						if(stacksConsumeSlots)															//Check if each instance of an item in a stack consumes slots
+						{
+							inventorySlotsUsed -= itemToRemove.slotCount;								//Remove the amount of slots used by the item
+							occupiedInventorySlots[slotIndex].stackSize--;								//Decrease stack size
+						}
+						else
+						{
+							occupiedInventorySlots[slotIndex].stackSize--;								//Decrease stack size
+						}
+					}
+				}
+				else
+                {
+					inventorySlotsUsed -= itemToRemove.slotCount;										//Add the amount of slots used by the item
+					occupiedInventorySlots.RemoveAt(slotIndex);											//Create a new InventorySlot for the item picked up
+					print(occupiedInventorySlots.Count);
+				}
+			}
+			else
+				Debug.LogError("GetSlotIndex returned: " + slotIndex);
+		}
+
+        UpdateUI();
+	}
+
 	void CreateInventorySlot(Item slotItem)
 	{
         Slot newSlot = new Slot(slotItem, 1);
@@ -99,6 +137,17 @@ public class Inventory : MonoBehaviour {
 	int GetSlotIndex(Item itemToCheck)
 	{
 		for(int i = 0; i < occupiedInventorySlots.Count; i++)
+		{
+			if(occupiedInventorySlots[i].item.itemName == itemToCheck.itemName)
+				return i;
+		}
+
+		return -1;
+	}
+
+	int GetSlotIndex(Item itemToCheck, int startingIndex)
+	{
+		for(int i = startingIndex; i < occupiedInventorySlots.Count; i++)
 		{
 			if(occupiedInventorySlots[i].item.itemName == itemToCheck.itemName)
 				return i;

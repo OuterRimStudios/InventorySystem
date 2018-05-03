@@ -12,7 +12,7 @@ public class ItemEditor : Editor {
 	SerializedProperty slotCountProp;
 	SerializedProperty uiIconProp;
 	SerializedProperty modelProp;
-
+	SerializedProperty equippableProp;
 
 	void OnEnable()
 	{
@@ -21,6 +21,7 @@ public class ItemEditor : Editor {
 		slotCountProp = serializedObject.FindProperty("slotCount");
 		uiIconProp = serializedObject.FindProperty("uiIcon");
 		modelProp = serializedObject.FindProperty("model");
+		equippableProp = serializedObject.FindProperty("equippable");
 	}
 
 	public override void OnInspectorGUI()
@@ -32,6 +33,8 @@ public class ItemEditor : Editor {
 		slotCountProp.intValue = EditorGUILayout.IntField(new GUIContent("Slot Count", "The number of inventory slots this item takes up."), slotCountProp.intValue);
 		uiIconProp.objectReferenceValue = EditorGUILayout.ObjectField("UI Icon", uiIconProp.objectReferenceValue, typeof(Sprite), false);
 		modelProp.objectReferenceValue = EditorGUILayout.ObjectField(new GUIContent("Item Model", "Leave blank if this item does not need a model"), modelProp.objectReferenceValue, typeof(GameObject), false);
+
+		equippableProp.boolValue = EditorGUILayout.Toggle(new GUIContent("Equippable", "Check this box if this item can be equipped."), equippableProp.boolValue);
 		
 		serializedObject.ApplyModifiedProperties();
 	}

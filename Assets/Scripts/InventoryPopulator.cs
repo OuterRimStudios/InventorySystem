@@ -7,11 +7,18 @@ public class InventoryPopulator : MonoBehaviour
     public Item[] items;
     public Inventory inventory;
     
-	void Start ()
+	IEnumerator Start ()
     {
 	    foreach(Item item in items)
         {
             inventory.AddItem(item);
+        }
+
+        yield return new WaitForSeconds(5f);
+
+        foreach(Item item in items)
+        {
+            inventory.RemoveItem(item);
         }
 	}
 }
