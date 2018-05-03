@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SalvoCharMaskL
+  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Human_
+    m_Weight: 1
+  - m_Path: Human_/Human_L_Platform
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_L_Thigh
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_L_Thigh/Human_L_Calf
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_L_Thigh/Human_L_Calf/Human_L_Foot
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_L_Thigh/Human_L_Calf/Human_L_Foot/Human_L_Toe_R1
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_R_Thigh
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_R_Thigh/Human_R_Calf
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_R_Thigh/Human_R_Calf/Human_R_Foot
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_R_Thigh/Human_R_Calf/Human_R_Foot/Human_R_Toe_R1
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Hlemet_Collar
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_IndexFinger1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_IndexFinger1/Human_L_IndexFinger2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_IndexFinger1/Human_L_IndexFinger2/Human_L_IndexFinger3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_MiddleFinger1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_MiddleFinger1/Human_L_MiddleFinger2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_MiddleFinger1/Human_L_MiddleFinger2/Human_L_MiddleFinger3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_PinkyFinger1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_PinkyFinger1/Human_L_PinkyFinger2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_PinkyFinger1/Human_L_PinkyFinger2/Human_L_PinkyFinger3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_PropGrip_01
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_PropGrip_01/Human_L_PropGrip_02
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_RingFinger1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_RingFinger1/Human_L_RingFinger2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_RingFinger1/Human_L_RingFinger2/Human_L_RingFinger3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_Thumb1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_Thumb1/Human_L_Thumb2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_L_Thumb1/Human_L_Thumb2/Human_L_Thumb3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_R_PropGrip_01
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/Human_L_Forearm/Human_L_Palm/Human_R_PropGrip_01/Human_R_PropGrip_02
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/RibPistonBL
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_L_Collarbone/Human_L_Upperarm/RibPistonBL/RibPistonBLBone
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_EYE_L
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_EYE_LID_Lower_L
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_EYE_LID_Lower_R
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_EYE_LID_Upper_L
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_EYE_LID_Upper_R
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_EYE_R
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_JAW
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_JAW/J_L_Cheek
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_JAW/J_Lip_Corner_L
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_JAW/J_Lip_Corner_R
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_JAW/J_LowerLip_L
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_JAW/J_LowerLip_Mid
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_JAW/J_LowerLip_R
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_JAW/J_R_Cheek
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_L_Brow
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_Mid_Brow
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_NOSE
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_R_Brow
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_UpperLip_L
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_UpperLip_Mid
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_Neck/Human_Head/J_FACE_RIG/J_UpperLip_R
+    m_Weight: 0
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_IndexFinger1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_IndexFinger1/Human_R_IndexFinger2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_IndexFinger1/Human_R_IndexFinger2/Human_R_IndexFinger3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_MiddleFinger1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_MiddleFinger1/Human_R_MiddleFinger2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_MiddleFinger1/Human_R_MiddleFinger2/Human_R_MiddleFinger3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_PinkyFinger1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_PinkyFinger1/Human_R_PinkyFinger2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_PinkyFinger1/Human_R_PinkyFinger2/Human_R_PinkyFinger3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_PropGrip_01
+      1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_PropGrip_01
+      1/Human_R_PropGrip_02 1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_RingFinger1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_RingFinger1/Human_R_RingFinger2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_RingFinger1/Human_R_RingFinger2/Human_R_RingFinger3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_Thumb1
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_Thumb1/Human_R_Thumb2
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/Human_R_Forearm/Human_R_Palm/Human_R_Thumb1/Human_R_Thumb2/Human_R_Thumb3
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/RibPistonBR
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/Human_R_Collarbone/Human_R_Upperarm/RibPistonBR/RibPistonBRBone
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/RibPistonAL
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/RibPistonAL/RibPistonALBone
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/RibPistonAR
+    m_Weight: 1
+  - m_Path: Human_/Human_Pelvis/Human_Spine1/Human_Spine2/Human_Spine3/Human_Spine4/Human_Ribcage/RibPistonAR/RibPistonARBone
+    m_Weight: 1
+  - m_Path: Human_/Human_R_Platform
+    m_Weight: 0
+  - m_Path: Tier_2_Meso_Female
+    m_Weight: 0
+  - m_Path: Tier_2_Meso_Female/Tier_2_Meso_Female_Body_Ver_1
+    m_Weight: 0
+  - m_Path: Tier_2_Meso_Female/Tier_2_Meso_Female_Head_Ver_1
+    m_Weight: 0
+  - m_Path: Tier_2_Meso_Female/Tier_2_Meso_Female_Lashes_Ver_1
+    m_Weight: 0
+  - m_Path: Tier_2_Meso_Male
+    m_Weight: 0
+  - m_Path: Tier_2_Meso_Male/Tier_2_Meso_Male_Body
+    m_Weight: 0
+  - m_Path: Tier_2_Meso_Male/Tier_2_Meso_Male_head_Ver_1
+    m_Weight: 0
+  - m_Path: Tier_2_Shared
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_Bubble_Helmet_Glass_Ver1
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_Bubble_Helmet_Lining_Ver1
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_Bubble_Helmet_MIC_Ver1
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_Bubble_Helmet_Ver1
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_Eyes1
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_Gloves_Boots_Ver1
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_LowerTeeth
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_Tongue
+    m_Weight: 0
+  - m_Path: Tier_2_Shared/Tier_2_UpperTeeth
+    m_Weight: 0
+  - m_Path: Tier_3_Meso_Female
+    m_Weight: 0
+  - m_Path: Tier_3_Meso_Female/Tier_3_Meso_Female_Body_Ver_1
+    m_Weight: 0
+  - m_Path: Tier_3_Meso_Female/Tier_3_Meso_Female_Head_Ver_1
+    m_Weight: 0
+  - m_Path: Tier_3_Meso_Female/Tier_3_Meso_Female_Lashes_Ver_1
+    m_Weight: 0
+  - m_Path: Tier_3_Meso_Male
+    m_Weight: 0
+  - m_Path: Tier_3_Meso_Male/Tier_3_Meso_Male_Body
+    m_Weight: 0
+  - m_Path: Tier_3_Meso_Male/Tier_3_Meso_Male_head_Ver_1
+    m_Weight: 0
+  - m_Path: Tier_3_Meso_Male/Tier_3_Meso_Male_Mustache
+    m_Weight: 0
+  - m_Path: Tier_3_Shared
+    m_Weight: 0
+  - m_Path: Tier_3_Shared/Tier_3_Gloves_Boots_Ver1
+    m_Weight: 0
+  - m_Path: Tier_3_Shared/Tier_3_Helmet_Glass_Ver1
+    m_Weight: 0
+  - m_Path: Tier_3_Shared/Tier_3_Helmet_Neck_Ver1
+    m_Weight: 0
+  - m_Path: Tier_3_Shared/Tier_3_Helmet_Ver1
+    m_Weight: 0
+  - m_Path: Tier_3_Shared/Tier_3_LowerTeeth
+    m_Weight: 0
+  - m_Path: Tier_3_Shared/Tier_3_Tongue
+    m_Weight: 0
+  - m_Path: Tier_3_Shared/Tier_3_UpperTeeth
+    m_Weight: 0
