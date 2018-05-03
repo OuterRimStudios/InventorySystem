@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da35dccfd7e2c134bbe077fe227e4d7e, type: 3}
+  m_Name: Tier 1 Male Body
+  m_EditorClassIdentifier: 
+  itemName: Tier 1 Helmet
+  stackSize: 1
+  slotCount: 1
+  uiIcon: {fileID: 21300000, guid: c06b2fb9b2e11a04aaf7445e9dd2a571, type: 3}
+  model: {fileID: 1709866319524862, guid: ec4f12de3c037714680121f847d3c1df, type: 2}
