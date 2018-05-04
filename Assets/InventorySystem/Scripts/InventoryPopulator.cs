@@ -16,9 +16,9 @@ public class InventoryPopulator : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
 
-        foreach(Item item in items)
-        {
-            inventory.RemoveItem(item);
-        }
+        //foreach(Item item in items)
+        //{
+        //    inventory.RemoveItem(item);
+        //}
 	}
 }

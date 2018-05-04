@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1170aae8c0e9b8547a7bfab4bd0e0a6e, type: 3}
-  m_Name: Tier 1 Male GloveBoots
+  m_Name: Tier 2 Male GloveBoots
   m_EditorClassIdentifier: 
   equippableSlotTypeSO: {fileID: 11400000, guid: e6b8800d0a473574997fafac5c5d1286,
     type: 2}
-  itemName: Tier 1 GlovesBoots
+  itemName: Tier 1 GloveBoots
   stackSize: 1
   slotCount: 1
   uiIcon: {fileID: 21300000, guid: c06b2fb9b2e11a04aaf7445e9dd2a571, type: 3}
-  model: {fileID: 1026577234109512, guid: 46fb19fc8153e904387b73cf77f58e31, type: 2}
+  model: {fileID: 1905688496542934, guid: 26817c6de909bb447af3f652b4621ea4, type: 2}
   equippable: 1
   equippableSlotType: GlovesBoots
   equippableSlotTypeIndex: 2

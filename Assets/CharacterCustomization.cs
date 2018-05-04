@@ -5,7 +5,23 @@ using System;
 
 public class CharacterCustomization : MonoBehaviour
 {
-    public Item[] itemsToEquip;
+    [Space, Header("Default Inventory Templates")]
+    public Item defaultHelmItem;
+    public SkinnedMeshRenderer defaultHelmMeshTemplate;
+    public Transform defaultHelmRootBone;
+    public Transform defaultHelmSpawnLocation;
+
+    [Space]
+    public Item defaultSuitItem;
+    public SkinnedMeshRenderer defaultSuitMeshTemplate;
+    public Transform defaultSuitRootBone;
+    public Transform defaultSuitSpawnLocation;
+
+    [Space]
+    public Item defaultGloveBootsItem;
+    public SkinnedMeshRenderer defaultGloveBootsMeshTemplate;
+    public Transform defaultGloveBootsRootBone;
+    public Transform defaultGloveBootsSpawnLocation;
 
     [Space, Header("Inventory Templates")]
     public SkinnedMeshRenderer helmMeshTemplate;
@@ -25,11 +41,15 @@ public class CharacterCustomization : MonoBehaviour
     SkinnedMeshRenderer meshTemplate;
     Transform itemSpawnLocation;
     Transform rootBone;
+    Item defaultItem;
+
+    Dictionary<string, GameObject> equippedItems = new Dictionary<string, GameObject>();
 
     private void Start()
     {
-        foreach(Item item in itemsToEquip)
-            EquipItem(item);
+        EquipDefaultItem("Helmet");
+        EquipDefaultItem("Suit");
+        EquipDefaultItem("GlovesBoots");
     }
 
     public void EquipItem(Item item)
@@ -52,16 +72,63 @@ public class CharacterCustomization : MonoBehaviour
                 rootBone = gloveBootsRootBone;
                 break;
         }
-        print(item.equippableSlotType);
-        print(meshTemplate);
-        print(itemSpawnLocation);
 
         GameObject newItem = Instantiate(item.model, itemSpawnLocation);
+
+        if (equippedItems.ContainsKey(item.equippableSlotType))
+        {
+            Destroy(equippedItems[item.equippableSlotType]);
+            equippedItems[item.equippableSlotType] = newItem;
+        }
+        else
+            equippedItems.Add(item.equippableSlotType, newItem);
+
         SkinnedMeshRenderer rend = newItem.GetComponent<SkinnedMeshRenderer>();
         rend.rootBone = rootBone;
         rend.bones = BuildBonesArray();
         UpdateMeshRenderer(rend, meshTemplate);
     }
+
+    public void EquipDefaultItem(string slotType)
+    {
+        switch (slotType)
+        {
+            case "Helmet":
+                defaultItem = defaultHelmItem;
+                meshTemplate = helmMeshTemplate;
+                itemSpawnLocation = helmSpawnLocation;
+                rootBone = helmRootBone;
+                break;
+            case "Suit":
+                defaultItem = defaultSuitItem;
+                meshTemplate = suitMeshTemplate;
+                itemSpawnLocation = suitSpawnLocation;
+                rootBone = suitRootBone;
+                break;
+            case "GlovesBoots":
+                defaultItem = defaultGloveBootsItem;
+                meshTemplate = gloveBootsMeshTemplate;
+                itemSpawnLocation = gloveBootsSpawnLocation;
+                rootBone = gloveBootsRootBone;
+                break;
+        }
+
+        GameObject newItem = Instantiate(defaultItem.model, itemSpawnLocation);
+
+        if (equippedItems.ContainsKey(slotType))
+        {
+            Destroy(equippedItems[slotType]);
+            equippedItems[slotType] = newItem;
+        }
+        else
+            equippedItems.Add(slotType, newItem);
+
+        SkinnedMeshRenderer rend = newItem.GetComponent<SkinnedMeshRenderer>();
+        rend.rootBone = rootBone;
+        rend.bones = BuildBonesArray();
+        UpdateMeshRenderer(rend, meshTemplate);
+    }
+
 
     Transform[] BuildBonesArray()
     {

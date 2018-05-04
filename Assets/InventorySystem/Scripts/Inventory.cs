@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Inventory : MonoBehaviour {
-
+public class Inventory : MonoBehaviour
+{
+    public EquippableCollection equippableCollection;
 	public InventorySlot inventorySlotPrefab;
 	public RectTransform inventoryContentArea;
 	public int inventorySlotCountMax;
@@ -102,7 +103,6 @@ public class Inventory : MonoBehaviour {
                 {
 					inventorySlotsUsed -= itemToRemove.slotCount;										//Add the amount of slots used by the item
 					occupiedInventorySlots.RemoveAt(slotIndex);											//Create a new InventorySlot for the item picked up
-					print(occupiedInventorySlots.Count);
 				}
 			}
 			else
@@ -178,6 +178,9 @@ public class Inventory : MonoBehaviour {
 				newSlot.inventorySlot.stackSize = occupiedInventorySlots[j].stackSize;
 				newSlot.inventorySlot.inventorySlotGO = newSlot.gameObject;
 				newSlot.inventorySlot.UpdateUI();
+
+                Button button = newSlot.GetComponent<Button>();
+                button.onClick.AddListener(delegate { equippableCollection.AddItem(newSlot.inventorySlot.item); });
 
 				inventorySlots.Add(newSlot.gameObject);
 			}
