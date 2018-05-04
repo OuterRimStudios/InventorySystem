@@ -5,39 +5,68 @@ using System;
 
 public class CharacterCustomization : MonoBehaviour
 {
-    public Transform characterRootBone;
-    public Item itemToEquip;
+    public Item[] itemsToEquip;
 
     [Space, Header("Inventory Templates")]
-    public SkinnedMeshRenderer helmMeshRenderer;
+    public SkinnedMeshRenderer helmMeshTemplate;
+    public Transform helmRootBone;
     public Transform helmSpawnLocation;
 
     [Space]
-    public SkinnedMeshRenderer bodyMeshRenderer;
-    public Transform bodySpawnLocation;
+    public SkinnedMeshRenderer suitMeshTemplate;
+    public Transform suitRootBone;
+    public Transform suitSpawnLocation;
 
     [Space]
-    public SkinnedMeshRenderer gloveBootsMeshRenderer;
+    public SkinnedMeshRenderer gloveBootsMeshTemplate;
+    public Transform gloveBootsRootBone;
     public Transform gloveBootsSpawnLocation;
+
+    SkinnedMeshRenderer meshTemplate;
+    Transform itemSpawnLocation;
+    Transform rootBone;
 
     private void Start()
     {
-        EquipItem(itemToEquip.model);
+        foreach(Item item in itemsToEquip)
+            EquipItem(item);
     }
 
-    public void EquipItem(GameObject item)
+    public void EquipItem(Item item)
     {
-        //GameObject newItem = Instantiate(item, itemSpawnLocation);
-        //SkinnedMeshRenderer rend = newItem.GetComponent<SkinnedMeshRenderer>();
-        //rend.rootBone = characterRootBone;
-        //rend.bones = BuildBonesArray();
-        //UpdateMeshRenderer(rend);
+        switch (item.equippableSlotType)
+        {
+            case "Helmet":
+                meshTemplate = helmMeshTemplate;
+                itemSpawnLocation = helmSpawnLocation;
+                rootBone = helmRootBone;
+                break;
+            case "Suit":
+                meshTemplate = suitMeshTemplate;
+                itemSpawnLocation = suitSpawnLocation;
+                rootBone = suitRootBone;
+                break;
+            case "GlovesBoots":
+                meshTemplate = gloveBootsMeshTemplate;
+                itemSpawnLocation = gloveBootsSpawnLocation;
+                rootBone = gloveBootsRootBone;
+                break;
+        }
+        print(item.equippableSlotType);
+        print(meshTemplate);
+        print(itemSpawnLocation);
+
+        GameObject newItem = Instantiate(item.model, itemSpawnLocation);
+        SkinnedMeshRenderer rend = newItem.GetComponent<SkinnedMeshRenderer>();
+        rend.rootBone = rootBone;
+        rend.bones = BuildBonesArray();
+        UpdateMeshRenderer(rend, meshTemplate);
     }
 
     Transform[] BuildBonesArray()
     {
         List<Transform> boneList = new List<Transform>();
-        ExtractBonesRecursively(characterRootBone, ref boneList);
+        ExtractBonesRecursively(rootBone, ref boneList);
         return boneList.ToArray();
     }
 
@@ -51,19 +80,18 @@ public class CharacterCustomization : MonoBehaviour
         }
     }
 
-     public void UpdateMeshRenderer(SkinnedMeshRenderer newMeshRenderer)
+     public void UpdateMeshRenderer(SkinnedMeshRenderer meshRenderer, SkinnedMeshRenderer _meshTemplate)
     {
-        //newMeshRenderer.sharedMesh = sharedMeshExample.sharedMesh;
+        meshRenderer.sharedMesh = _meshTemplate.sharedMesh;
 
-        //Transform[] childrens = transform.GetComponentsInChildren<Transform>(true);
+        Transform[] childrens = transform.GetComponentsInChildren<Transform>(true);
 
-        //// sort bones.
-        //Transform[] bones = new Transform[sharedMeshExample.bones.Length];
-        //for (int boneOrder = 0; boneOrder < sharedMeshExample.bones.Length; boneOrder++)
-        //{
-        //    bones[boneOrder] = Array.Find<Transform>(childrens, c => c.name == sharedMeshExample.bones[boneOrder].name);
-        //}
-        //newMeshRenderer.bones = bones;
+        // sort bones.
+        Transform[] bones = new Transform[_meshTemplate.bones.Length];
+        for (int boneOrder = 0; boneOrder < _meshTemplate.bones.Length; boneOrder++)
+        {
+            bones[boneOrder] = Array.Find<Transform>(childrens, c => c.name == _meshTemplate.bones[boneOrder].name);
+        }
+        meshRenderer.bones = bones;
     }
-
 }

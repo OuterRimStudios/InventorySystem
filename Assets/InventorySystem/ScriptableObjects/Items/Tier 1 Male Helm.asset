@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1170aae8c0e9b8547a7bfab4bd0e0a6e, type: 3}
+  m_Name: Tier 1 Male Helm
+  m_EditorClassIdentifier: 
+  equippableSlotTypeSO: {fileID: 11400000, guid: e6b8800d0a473574997fafac5c5d1286,
+    type: 2}
+  itemName: Tier 1 Male Helm
+  stackSize: 1
+  slotCount: 1
+  uiIcon: {fileID: 21300000, guid: c06b2fb9b2e11a04aaf7445e9dd2a571, type: 3}
+  model: {fileID: 1162348250022814, guid: 41303864fc555ef4e962202dc7698027, type: 2}
+  equippable: 1
+  equippableSlotType: Helmet
+  equippableSlotTypeIndex: 0

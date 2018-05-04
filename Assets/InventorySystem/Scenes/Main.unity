@@ -3283,8 +3283,7 @@ Transform:
   m_LocalRotation: {x: 3.2376947e-15, y: -1.9125998e-15, z: -0.13825203, w: 0.9903971}
   m_LocalPosition: {x: -0.038368072, y: -0.020110253, z: 0.000000003915611}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2130445232}
+  m_Children: []
   m_Father: {fileID: 228547258}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3577,9 +3576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - {fileID: 11400000, guid: 008e29353bd71b94fb112f7d28a2cfde, type: 2}
-  - {fileID: 11400000, guid: 008e29353bd71b94fb112f7d28a2cfde, type: 2}
-  - {fileID: 11400000, guid: 008e29353bd71b94fb112f7d28a2cfde, type: 2}
+  - {fileID: 11400000, guid: eb59227077137ea408bfff518de36202, type: 2}
+  - {fileID: 11400000, guid: 4ca5bf3a0a00c87478008c1385e725ef, type: 2}
+  - {fileID: 11400000, guid: 0d46e8324b021664da0ec087952fe300, type: 2}
   inventory: {fileID: 1383355080}
 --- !u!1 &536473514
 GameObject:
@@ -4428,6 +4427,11 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.25094816, y: -0.0047667027, z: -0.000014841557}
     m_Extent: {x: 0.18850619, y: 0.19263983, z: 0.1074107}
   m_DirtyAABB: 0
+--- !u!137 &760859132 stripped
+SkinnedMeshRenderer:
+  m_PrefabParentObject: {fileID: 137711777298822458, guid: 41303864fc555ef4e962202dc7698027,
+    type: 2}
+  m_PrefabInternal: {fileID: 854922126}
 --- !u!1 &775023130
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,7 +4966,7 @@ Prefab:
       objectReference: {fileID: 443291445}
     - target: {fileID: 1162348250022814, guid: 41303864fc555ef4e962202dc7698027, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 41303864fc555ef4e962202dc7698027, type: 2}
@@ -5213,10 +5217,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9227964b807a59a45b43d216cbdab9d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterRootBone: {fileID: 1984310934}
-  itemSpawnLocation: {fileID: 1984310934}
-  sharedMeshExample: {fileID: 1342784909}
-  itemToEquip: {fileID: 11400000, guid: eab1b3b07ee9f2a4783d791b0e63d3e0, type: 2}
+  itemsToEquip:
+  - {fileID: 11400000, guid: 4ca5bf3a0a00c87478008c1385e725ef, type: 2}
+  - {fileID: 11400000, guid: 0d46e8324b021664da0ec087952fe300, type: 2}
+  - {fileID: 11400000, guid: 0d46e8324b021664da0ec087952fe300, type: 2}
+  helmMeshTemplate: {fileID: 760859132}
+  helmRootBone: {fileID: 443291445}
+  helmSpawnLocation: {fileID: 443291445}
+  suitMeshTemplate: {fileID: 1342784909}
+  suitRootBone: {fileID: 1984310934}
+  suitSpawnLocation: {fileID: 1984310934}
+  gloveBootsMeshTemplate: {fileID: 1822611981}
+  gloveBootsRootBone: {fileID: 1391252450}
+  gloveBootsSpawnLocation: {fileID: 1391252450}
 --- !u!1 &919473008
 GameObject:
   m_ObjectHideFlags: 0
@@ -9282,6 +9295,10 @@ Prefab:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 1391252450}
+    - target: {fileID: 1026577234109512, guid: 46fb19fc8153e904387b73cf77f58e31, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46fb19fc8153e904387b73cf77f58e31, type: 2}
   m_IsPrefabParent: 0
@@ -11122,6 +11139,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!137 &1822611981 stripped
+SkinnedMeshRenderer:
+  m_PrefabParentObject: {fileID: 137810055848909206, guid: 46fb19fc8153e904387b73cf77f58e31,
+    type: 2}
+  m_PrefabInternal: {fileID: 1471846428}
 --- !u!1 &1841680665
 GameObject:
   m_ObjectHideFlags: 0
@@ -12753,34 +12775,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.2599744, y: 0.09478313, z: 0.0010200366}
     m_Extent: {x: 0.022759594, y: 0.019712202, z: 0.05658313}
   m_DirtyAABB: 0
---- !u!1 &2130445231
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2130445232}
-  m_Layer: 8
-  m_Name: Helm Position
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2130445232
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2130445231}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 443291445}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136755193
 GameObject:
   m_ObjectHideFlags: 0

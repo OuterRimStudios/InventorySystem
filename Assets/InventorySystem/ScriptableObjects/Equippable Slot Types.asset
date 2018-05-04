@@ -14,5 +14,4 @@ MonoBehaviour:
   equippableSlotTypes:
   - Helmet
   - Suit
-  - Gloves
-  - Boots
+  - GlovesBoots
