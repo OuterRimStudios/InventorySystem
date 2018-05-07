@@ -16,7 +16,7 @@ MonoBehaviour:
   itemName: Tier 1 GlovesBoots
   stackSize: 1
   slotCount: 1
-  uiIcon: {fileID: 21300000, guid: c06b2fb9b2e11a04aaf7445e9dd2a571, type: 3}
+  uiIcon: {fileID: 21300000, guid: ba53feb9a1b51fb4182db04996d7114a, type: 3}
   model: {fileID: 1026577234109512, guid: 46fb19fc8153e904387b73cf77f58e31, type: 2}
   equippable: 1
   equippableSlotType: GlovesBoots
